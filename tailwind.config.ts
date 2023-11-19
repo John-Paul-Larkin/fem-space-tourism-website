@@ -18,6 +18,7 @@ const config: Config = {
       fontFamily: {
         barlow_condensed: ["var(--font-barlow-condensed)"],
         bellefair: ["var(--font-bellefair)"],
+        barlow: ["var(--font-barlow)"],
       },
       letterSpacing: {
         "ls-1": "1.25px",
@@ -26,6 +27,16 @@ const config: Config = {
         "ls-4": "2.7px",
         "ls-5": "3.375px",
         "ls-6": "4.725px",
+      },
+      lineHeight: {
+        "lh-1": "1.5625rem",
+        "lh-2": "1.75rem",
+        "lh-3": "2rem",
+        "lh-4": "6.255rem",
+        "lh-5": "9.3755rem",
+      },
+      maxWidth: {
+        "container-width": "87.5rem", // 1400px
       },
     },
     fontSize: {
@@ -39,19 +50,21 @@ const config: Config = {
       "fs-800": "3.5rem",
       "fs-900": "5rem",
       "fs-1000": "6.25rem",
-      "fs-1100": "9,375rem",
+      "fs-1100": "9.375rem",
     },
-
     screens: {
       tablet: "480px",
       desktop: "769px",
+      "lrg-desktop" : "1000px",
     },
+
     colors: {
       white: "hsl(0, 0%, 100%)",
       lilac: "hsl(231, 77%, 90%)",
       black: "hsl(230, 25%, 7%)",
       yellow: "hsl(59, 100%, 75%)",
       brown: "hsl(48, 77%, 42%)",
+      "black-rgba": "rgba(255, 255, 255, 0.04)",
     },
     backgroundImage: {
       "home-mobile": "url('/home/background-home-mobile.jpg')",
