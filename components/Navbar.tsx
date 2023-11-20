@@ -12,10 +12,12 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="absolute w-screen">
+    <header className="absolute w-screen">
       <div className="z-40 mx-auto flex h-[5.5rem] w-full max-w-container-width items-center tablet:h-24 desktop:mt-10">
         <div className="relative ml-6 h-10 w-10 tablet:ml-10 tablet:h-12 tablet:w-12  tablet:min-w-[3rem] desktop:mx-14">
-          <Image priority src={logo} fill={true} alt="logo" />
+          <Link href="/">
+            <Image priority src={logo} fill={true} alt="logo" />
+          </Link>
         </div>
         <div className="grow">
           <div className="hidden lrg-desktop:relative lrg-desktop:z-50 lrg-desktop:block lrg-desktop:h-[1px] lrg-desktop:w-[calc(100%+2rem)] lrg-desktop:bg-white lrg-desktop:opacity-25"></div>
@@ -43,7 +45,7 @@ export default function Navbar() {
           </ul>
         </nav>
       </div>
-    </div>
+    </header>
   );
 }
 

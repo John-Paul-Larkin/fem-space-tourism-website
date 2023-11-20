@@ -38,6 +38,9 @@ const config: Config = {
       maxWidth: {
         "container-width": "87.5rem", // 1400px
       },
+      // fontSize: {
+      //   clamp: "clamp(1em, 2em, 3em)",
+      // },
     },
     fontSize: {
       "fs-100": "0.875rem",
@@ -56,6 +59,8 @@ const config: Config = {
       tablet: "480px",
       desktop: "769px",
       "lrg-desktop" : "1000px",
+      "x-lrg-desktop" : "1441px",
+
     },
 
     colors: {
