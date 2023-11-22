@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+.menu-btn {
+  @apply cursor-pointer tablet:h-full after:tablet:absolute after:tablet:h-full after:tablet:w-full after:tablet:hover:border-b-[3px];
+}
+
+.destination-menu-btn {
+  @apply relative flex items-center h-full cursor-pointer after:absolute after:h-full after:w-full after:hover:border-b-[3px] after:border-white;
+}
+
 :root {
   /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
-
-  
 }
 
 /* @media (prefers-color-scheme: dark) {

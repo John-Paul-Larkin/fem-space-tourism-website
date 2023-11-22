@@ -57,7 +57,7 @@ const NavMenuItem = ({
   menuItem: string;
 }) => {
   return (
-    <li className="after:tablet:content[''] relative mt-8 cursor-pointer tablet:m-0 tablet:flex tablet:h-full tablet:items-center after:tablet:absolute after:tablet:h-full after:tablet:w-full after:tablet:hover:border-b-[3px] ">
+    <li className="relative mt-8 tablet:m-0 tablet:flex tablet:items-center menu-btn">
       <Link
         href={`/${menuItem}`}
         className="z-50 tablet:flex tablet:h-full tablet:items-center"
@@ -70,3 +70,5 @@ const NavMenuItem = ({
     </li>
   );
 };
+
+// after:tablet:absolute after:tablet:h-full after:tablet:w-full after:tablet:hover:border-b-[3px]

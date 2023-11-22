@@ -15,6 +15,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      gridTemplateRows: {
+    
+        'destination': 'auto auto auto auto auto',
+
+      },
+
+
+
       fontFamily: {
         barlow_condensed: ["var(--font-barlow-condensed)"],
         bellefair: ["var(--font-bellefair)"],
