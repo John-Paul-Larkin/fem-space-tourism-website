@@ -7,13 +7,20 @@
 }
 
 .destination-menu-btn {
-  @apply relative flex items-center h-full cursor-pointer after:absolute after:h-full after:w-full after:hover:border-b-[3px] after:border-white;
+  @apply relative flex h-full cursor-pointer after:absolute  after:h-full after:w-full after:border-white after:hover:border-b-[3px];
 }
+
+/* .destination-menu-btn:active {
+  @apply relative flex h-full cursor-pointer items-center after:absolute after:h-full after:w-full after:border-white after:hover:border-b-[3px];
+
+} */
 
 :root {
   /* --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
 
 /* @media (prefers-color-scheme: dark) {

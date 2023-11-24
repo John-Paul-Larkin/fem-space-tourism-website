@@ -16,12 +16,8 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateRows: {
-    
-        'destination': 'auto auto auto auto auto',
-
+        destination: "auto 1fr auto auto auto",
       },
-
-
 
       fontFamily: {
         barlow_condensed: ["var(--font-barlow-condensed)"],
@@ -66,9 +62,8 @@ const config: Config = {
     screens: {
       tablet: "480px",
       desktop: "769px",
-      "lrg-desktop" : "1000px",
-      "x-lrg-desktop" : "1441px",
-
+      "lrg-desktop": "1000px",
+      "x-lrg-desktop": "1441px",
     },
 
     colors: {
@@ -77,6 +72,7 @@ const config: Config = {
       black: "hsl(230, 25%, 7%)",
       yellow: "hsl(59, 100%, 75%)",
       brown: "hsl(48, 77%, 42%)",
+      green: "hsl(182, 87%, 39%)",
       "black-rgba": "rgba(255, 255, 255, 0.04)",
     },
     backgroundImage: {
