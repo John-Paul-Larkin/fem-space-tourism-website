@@ -59,22 +59,23 @@ const NavMenuItem = ({
 }) => {
   const segment = useSelectedLayoutSegment();
 
-
   return (
     <li
       className={`nav-btn relative mt-8 tablet:m-0 tablet:flex tablet:items-center ${
         segment == menuItem ? "after:tablet:border-b-[3px]" : ""
       }`}
     >
-      <Link
-        href={`/${menuItem}`}
-        className="z-50 tablet:flex tablet:h-full tablet:items-center"
-      >
-        <span className="mr-3 font-bold tablet:hidden desktop:inline">
-          {index}
-        </span>
-        {menuItem}
-      </Link>
+      {menuItem && (
+        <Link
+          href={`/${menuItem}`}
+          className="z-50 tablet:flex tablet:h-full tablet:items-center"
+        >
+          <span className="mr-3 font-bold tablet:hidden desktop:inline">
+            {index}
+          </span>
+          {menuItem}
+        </Link>
+      )}
     </li>
   );
 };
