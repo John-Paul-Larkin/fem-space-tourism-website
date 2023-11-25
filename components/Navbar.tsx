@@ -65,17 +65,15 @@ const NavMenuItem = ({
         segment == menuItem ? "after:tablet:border-b-[3px]" : ""
       }`}
     >
-      {menuItem && (
-        <Link
-          href={`/${menuItem}`}
-          className="z-50 tablet:flex tablet:h-full tablet:items-center"
-        >
-          <span className="mr-3 font-bold tablet:hidden desktop:inline">
-            {index}
-          </span>
-          {menuItem}
-        </Link>
-      )}
+      <Link
+        href={`/${menuItem}`}
+        className="z-50 tablet:flex tablet:h-full tablet:items-center"
+      >
+        <span className="mr-3 font-bold tablet:hidden desktop:inline">
+          {index}
+        </span>
+        {menuItem}
+      </Link>
     </li>
   );
 };

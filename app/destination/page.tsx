@@ -177,17 +177,13 @@ const DestinationMenu = (props: Props) => {
   const { name, handleClickDestination, menuItem } = props;
 
   return (
-    <>
-      {menuItem && (
-        <li
-          onClick={() => handleClickDestination(menuItem)}
-          className={`destination-menu-btn ${
-            name == menuItem ? "after:tablet:border-b-[3px]" : ""
-          }`}
-        >
-          {menuItem}
-        </li>
-      )}
-    </>
+    <li
+      onClick={() => handleClickDestination(menuItem)}
+      className={`destination-menu-btn ${
+        name == menuItem ? "after:tablet:border-b-[3px]" : ""
+      }`}
+    >
+      {menuItem}
+    </li>
   );
 };
