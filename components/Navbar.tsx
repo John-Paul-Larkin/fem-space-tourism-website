@@ -7,6 +7,7 @@ import close from "@/public/shared/icon-close.svg";
 import Link from "next/link";
 import { useState } from "react";
 import React from "react";
+import { useSelectedLayoutSegment } from "next/navigation";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -56,8 +57,16 @@ const NavMenuItem = ({
   index: string;
   menuItem: string;
 }) => {
+  const segment = useSelectedLayoutSegment();
+
+  console.log(segment);
+
   return (
-    <li className="relative mt-8 tablet:m-0 tablet:flex tablet:items-center menu-btn">
+    <li
+      className={`nav-btn relative mt-8 tablet:m-0 tablet:flex tablet:items-center ${
+        segment == menuItem ? "after:tablet:border-b-[3px]" : ""
+      }`}
+    >
       <Link
         href={`/${menuItem}`}
         className="z-50 tablet:flex tablet:h-full tablet:items-center"
@@ -70,5 +79,3 @@ const NavMenuItem = ({
     </li>
   );
 };
-
-// after:tablet:absolute after:tablet:h-full after:tablet:w-full after:tablet:hover:border-b-[3px]

@@ -16,7 +16,13 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateRows: {
-        destination: "auto 1fr auto auto auto",
+        destinationMobile: "auto 1fr auto auto",
+        destinationDesktop: "auto 1fr auto",
+
+      },
+    
+      gridTemplateColumns: {
+        destinationDesktop: "1fr 1fr",
       },
 
       fontFamily: {
@@ -40,7 +46,9 @@ const config: Config = {
         "lh-5": "9.3755rem",
       },
       maxWidth: {
-        "container-width": "87.5rem", // 1400px
+      //  "container-width": "87.5rem", // 1400px
+       "container-width": "90rem", 
+
       },
       // fontSize: {
       //   clamp: "clamp(1em, 2em, 3em)",
@@ -74,6 +82,7 @@ const config: Config = {
       brown: "hsl(48, 77%, 42%)",
       green: "hsl(182, 87%, 39%)",
       "black-rgba": "rgba(255, 255, 255, 0.04)",
+      "opaque-border": "rgba(255, 255, 255, 0.3)",
     },
     backgroundImage: {
       "home-mobile": "url('/home/background-home-mobile.jpg')",
