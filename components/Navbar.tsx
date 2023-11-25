@@ -16,7 +16,7 @@ export default function Navbar() {
     <header className="absolute w-screen">
       <div className="z-40 mx-auto flex h-[5.5rem] w-full max-w-container-width items-center tablet:h-24 desktop:mt-10">
         <div className="relative ml-6 h-10 w-10 tablet:ml-10 tablet:h-12 tablet:w-12  tablet:min-w-[3rem] desktop:mx-14">
-          <Link href="/home">
+          <Link href="/">
             <Image priority src={logo} fill={true} alt="logo" />
           </Link>
         </div>
@@ -66,7 +66,7 @@ const NavMenuItem = ({
       }`}
     >
       <Link
-        href={`/${menuItem}`}
+        href={`/${menuItem === 'home' ? '' : menuItem}`}
         className="z-50 tablet:flex tablet:h-full tablet:items-center"
       >
         <span className="mr-3 font-bold tablet:hidden desktop:inline">
