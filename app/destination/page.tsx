@@ -6,8 +6,9 @@ import { destinations } from "@/public/data/data.json";
 
 export default function Destination() {
   const [selectedDestination, setSelectedDestination] = useState(
-    destinations.find((destination) => destination.name === "Moon"),
+    destinations[0],
   );
+  // destinations.find((destination) => destination.name === "Moon"),
 
   const name = selectedDestination?.name;
   const description = selectedDestination?.description;
@@ -21,7 +22,7 @@ export default function Destination() {
       (destination) => destination.name === clickedDestination,
     );
 
-    setSelectedDestination(destinationInfo);
+    destinationInfo && setSelectedDestination(destinationInfo);
   };
 
   return (
@@ -31,8 +32,8 @@ export default function Destination() {
           className="grid-rows-destinationMobile bg-brown--- desktop:grid-rows-destinationDesktop desktop:grid-cols-destinationDesktop
           
           bg-yellow.. grid text-center 
-desktop:text-left
 desktop:mb-[7.375rem]
+desktop:text-left
           "
         >
           <h1
@@ -41,10 +42,10 @@ desktop:mb-[7.375rem]
           tablet:text-fs-500 tablet:tracking-ls-5
 
 
-            desktop:mt-20
+            desktop:col-span-2
 
-          desktop:col-span-2
           desktop:m-0
+          desktop:mt-20
           desktop:text-fs-600
           desktop:tracking-ls-6
           "
@@ -64,9 +65,9 @@ desktop:mb-[7.375rem]
             desktop:m-0
             desktop:mr-[5rem]
 
-            desktop:w-[70%]
-            desktop:self-end desktop:justify-self-end
             desktop:mt-[6.0625rem]
+            desktop:w-[70%] desktop:self-end
+            desktop:justify-self-end
 
             "
           >
@@ -85,11 +86,11 @@ desktop:mb-[7.375rem]
           tablet:mb-8 tablet:h-[2.3rem] tablet:text-fs-300 
           tablet:tracking-ls-4
 
-          desktop:m-0 desktop:mt-16
+          desktop:m-0 desktop:mb-[2.3125rem]
 
+          desktop:mt-16
           desktop:text-fs-300
-          desktop:tracking-ls-4
-        desktop:mb-[2.3125rem]
+        desktop:tracking-ls-4
           "
             >
               <ul className="mx-auto  flex h-full w-[14.84375rem] items-start justify-between tablet:w-[17.84375rem] desktop:mx-0">
@@ -131,9 +132,9 @@ desktop:mb-[7.375rem]
             <p
               className="lilac mx-8 mb-8 text-fs-200 leading-lh-1 text-lilac tablet:mx-[6.125rem] tablet:mb-[3.1rem] tablet:text-fs-300 tablet:leading-lh-2
             desktop:m-0
-    desktop:w-[27.75rem]
-          desktop:text-fs-400 desktop:leading-lh-3
-          desktop:mb-[3.375rem]
+    desktop:mb-[3.375rem]
+          desktop:w-[27.75rem] desktop:text-fs-400
+          desktop:leading-lh-3
 
             "
             >
@@ -141,17 +142,13 @@ desktop:mb-[7.375rem]
             </p>
           </section>
 
-          <section className="tablet:mt-[1.8rem] tablet:flex tablet:justify-center desktop:self-end desktop:justify-self-start desktop:ml-[5rem] ">
+          <section className="tablet:mt-[1.8rem] tablet:flex tablet:justify-center desktop:ml-[5rem] desktop:self-end desktop:justify-self-start ">
             <div className="mb-8 mt-8 tablet:m-0 tablet:w-[14rem] desktop:mb-0">
               <h3 className=" mb-[.4rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac ">
                 avg. distance
               </h3>
               <p className="font-bellefair text-fs-600 uppercase">{distance}</p>
             </div>
-
-
-
-
 
             <div className="tablet:w-[14rem] desktop:mb-0">
               <h3 className="mb-2 font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac">
