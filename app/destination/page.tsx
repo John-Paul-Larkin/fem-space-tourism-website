@@ -17,8 +17,10 @@ export default function Destination() {
 
   const image = selectedDestination?.images.webp;
 
+  const copy = [...destinations];
+
   const handleClickDestination = (clickedDestination: string) => {
-    const destinationInfo = destinations.find(
+    const destinationInfo = copy.find(
       (destination) => destination.name === clickedDestination,
     );
 
