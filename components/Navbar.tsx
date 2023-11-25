@@ -65,7 +65,7 @@ const NavMenuItem = ({
         segment == menuItem ? "after:tablet:border-b-[3px]" : ""
       }`}
     >
-      <Link
+      {/* <Link
         href={`/${menuItem}`}
         className="z-50 tablet:flex tablet:h-full tablet:items-center"
       >
@@ -73,7 +73,7 @@ const NavMenuItem = ({
           {index}
         </span>
         {menuItem}
-      </Link>
+      </Link> */}
     </li>
   );
 };
