@@ -59,7 +59,6 @@ const NavMenuItem = ({
 }) => {
   const segment = useSelectedLayoutSegment();
 
-  console.log(segment);
 
   return (
     <li
