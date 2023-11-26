@@ -1,17 +1,3 @@
-// "use client";
-// import React from "react";
-// import { useRouter } from "next/navigation";
-
-// export default function App() {
-//   const router = useRouter();
-
-//   (() => router.push("/home"))();
-
-//   // Not sure about this, but wanted this root segment to be /home
-
-//   return <></>;
-// }
-
 import Link from "next/link";
 
 export default function Home() {
@@ -45,7 +31,7 @@ export default function Home() {
         </div>
         <div>
           <Link
-            href="/home"
+            href="/destination"
             className="before:content[''] relative z-30 mb-12 flex h-[9.375rem] w-[9.375rem] items-center justify-center rounded-full
           bg-white text-black after:absolute after:z-20 after:h-[9.375rem] after:w-[9.375rem] after:rounded-full after:bg-white after:opacity-10 after:transition-all after:duration-500
           after:ease-in-out after:hover:scale-150 after:focus:scale-150 tablet:mb-[5.625rem] tablet:h-[15.125rem] tablet:w-[15.125rem] tablet:after:h-[15.125rem] tablet:after:w-[15.125rem] desktop:m-0 desktop:h-[17.125rem] desktop:w-[17.125rem]"

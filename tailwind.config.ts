@@ -16,13 +16,12 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateRows: {
-        destinationMobile: "auto 1fr auto auto",
+        destinationMobile: "auto 1fr auto",
         destinationDesktop: "auto 1fr auto",
-
       },
-    
+
       gridTemplateColumns: {
-        destinationDesktop: "1fr 1fr",
+        destinationDesktop: "1fr .72fr",
       },
 
       fontFamily: {
@@ -46,9 +45,8 @@ const config: Config = {
         "lh-5": "9.3755rem",
       },
       maxWidth: {
-      //  "container-width": "87.5rem", // 1400px
-       "container-width": "90rem", 
-
+        //  "container-width": "87.5rem", // 1400px
+        "container-width": "90rem",
       },
       // fontSize: {
       //   clamp: "clamp(1em, 2em, 3em)",
@@ -70,6 +68,7 @@ const config: Config = {
     screens: {
       tablet: "480px",
       desktop: "769px",
+      "mid-desktop": "850px",
       "lrg-desktop": "1000px",
       "x-lrg-desktop": "1441px",
     },
@@ -82,7 +81,7 @@ const config: Config = {
       brown: "hsl(48, 77%, 42%)",
       green: "hsl(182, 87%, 39%)",
       "black-rgba": "rgba(255, 255, 255, 0.04)",
-      "opaque-border": "rgba(255, 255, 255, 0.3)",
+      "opaque-border": "rgba(255, 255, 255, 0.2)",
     },
     backgroundImage: {
       "home-mobile": "url('/home/background-home-mobile.jpg')",

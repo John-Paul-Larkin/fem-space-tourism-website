@@ -7,7 +7,7 @@
 }
 
 .destination-menu-btn {
-  @apply relative flex h-full cursor-pointer after:absolute  after:h-full after:w-full after:border-white after:hover:border-b-[3px] after:tablet:hover:border-opaque-border; 
+  @apply after:hover:border-opaque-border relative flex h-full cursor-pointer  after:absolute after:h-full after:w-full after:border-white after:hover:border-b-[3px];
 }
 
 /* .destination-menu-btn:active {
