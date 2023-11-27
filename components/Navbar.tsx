@@ -13,19 +13,19 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="absolute w-screen">
-      <div className="z-40 mx-auto flex h-[5.5rem] w-full max-w-container-width items-center tablet:h-24 desktop:mt-10">
-        <div className="relative ml-6 h-10 w-10 tablet:ml-10 tablet:h-12 tablet:w-12  tablet:min-w-[3rem] desktop:mx-14">
-          <Link href="/">
+    <header className="fixed z-[10] w-screen">
+      <div className="z-[11] mx-auto flex h-[5.5rem] w-full max-w-container-width items-center tablet:h-24 desktop:mt-10">
+        <Link href="/">
+          <div className="relative ml-6 h-10 w-10 tablet:ml-10 tablet:h-12 tablet:w-12  tablet:min-w-[3rem] desktop:mx-14">
             <Image priority src={logo} fill={true} alt="logo" />
-          </Link>
-        </div>
+          </div>
+        </Link>
         <div className="grow">
-          <div className="hidden lrg-desktop:relative lrg-desktop:z-50 lrg-desktop:block lrg-desktop:h-[1px] lrg-desktop:w-[calc(100%+2rem)] lrg-desktop:bg-white lrg-desktop:opacity-25"></div>
+          <div className="hidden lrg-desktop:relative lrg-desktop:z-[12] lrg-desktop:block lrg-desktop:h-[1px] lrg-desktop:w-[calc(100%+2rem)] lrg-desktop:bg-white lrg-desktop:opacity-25"></div>
         </div>
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="relative z-40 mr-6 text-white tablet:hidden"
+          className="relative z-[11] mr-6 text-white tablet:hidden"
         >
           {!isMenuOpen && <Image src={hamburger} alt="hamburger menu" />}
           {isMenuOpen && <Image src={close} alt="close menu" />}
@@ -39,10 +39,30 @@ export default function Navbar() {
           }
         >
           <ul className="ml-7 font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:flex tablet:h-full tablet:items-center tablet:justify-evenly tablet:text-fs-100 tablet:tracking-ls-3 desktop:mx-0 desktop:justify-evenly desktop:text-fs-300 desktop:tracking-ls-4 lrg-desktop:desktop:ml-28 lrg-desktop:desktop:mr-40 lrg-desktop:justify-between">
-            <NavMenuItem menuItem="home" index="00" />
-            <NavMenuItem menuItem="destination" index="01" />
-            <NavMenuItem menuItem="crew" index="02" />
-            <NavMenuItem menuItem="technology" index="03" />
+            <NavMenuItem
+              menuItem="home"
+              index="00"
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
+            <NavMenuItem
+              menuItem="destination"
+              index="01"
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
+            <NavMenuItem
+              menuItem="crew"
+              index="02"
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
+            <NavMenuItem
+              menuItem="technology"
+              index="03"
+              isMenuOpen={isMenuOpen}
+              setIsMenuOpen={setIsMenuOpen}
+            />
           </ul>
         </nav>
       </div>
@@ -50,14 +70,17 @@ export default function Navbar() {
   );
 }
 
-const NavMenuItem = ({
-  menuItem,
-  index,
-}: {
+type Props = {
   index: string;
   menuItem: string;
-}) => {
+  isMenuOpen: boolean;
+  setIsMenuOpen: React.Dispatch<React.SetStateAction<boolean>>;
+};
+
+const NavMenuItem = (props: Props) => {
   const segment = useSelectedLayoutSegment();
+
+  const { menuItem, setIsMenuOpen, index, isMenuOpen } = props;
 
   return (
     <li
@@ -66,8 +89,9 @@ const NavMenuItem = ({
       }`}
     >
       <Link
-        href={`/${menuItem === 'home' ? '' : menuItem}`}
-        className="z-50 tablet:flex tablet:h-full tablet:items-center"
+        href={`/${menuItem === "home" ? "" : menuItem}`}
+        className="z-[12] tablet:flex tablet:h-full tablet:items-center"
+        onClick={() => setIsMenuOpen(false)}
       >
         <span className="mr-3 font-bold tablet:hidden desktop:inline">
           {index}

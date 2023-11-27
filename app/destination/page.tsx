@@ -2,17 +2,14 @@
 
 import Image from "next/image";
 import React, { useState } from "react";
-import { destinations } from "@/public/data/data.json";
+import jsonData from "@/public/data/data.json";
 
 export default function Destination() {
+  const { destinations } = jsonData;
   const [selectedDestination, setSelectedDestination] = useState(
     destinations[0],
   );
-
-  const name = selectedDestination?.name;
-  const description = selectedDestination?.description;
-  const travel = selectedDestination?.travel;
-  const distance = selectedDestination?.distance;
+  const { name, description, travel, distance } = selectedDestination;
   const image = selectedDestination?.images.webp;
 
   const handleClickDestination = (clickedDestination: string) => {
@@ -23,17 +20,15 @@ export default function Destination() {
   };
 
   return (
-    <main className="h-screen w-screen overflow-hidden bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
+    <main className=" h-screen w-screen overflow-hidden bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
       <div className="mx-auto mt-[5.4rem] h-screen max-w-container-width desktop:mt-[8.5rem]">
         <div
           className="grid-rows-destinationMobile  desktop:grid-rows-destinationDesktop desktop:grid-cols-destinationDesktop
           grid text-center desktop:mb-[7.375rem] desktop:text-left"
         >
           <h1
-            className=" font-barlow_condensed text-fs-300
-          uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left
-          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:m-0 desktop:ml-[11%] desktop:mt-[4.5rem] desktop:text-fs-600 desktop:tracking-ls-6
-          "
+            className=" font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left
+          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:m-0 desktop:ml-[11%] desktop:mt-[4.5rem] desktop:text-fs-600 desktop:tracking-ls-6"
           >
             <span className="mr-[1.125rem] font-bold opacity-25">01</span>
             Pick your destination
@@ -103,8 +98,7 @@ export default function Destination() {
                   {distance}
                 </p>
               </div>
-
-              <div className="bg-brown... tablet:m-0 tablet:w-[14rem] desktop:mb-0">
+              <div className="tablet:m-0 tablet:w-[14rem] desktop:mb-0">
                 <h3 className="mb-[.4rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac">
                   est. travel time
                 </h3>

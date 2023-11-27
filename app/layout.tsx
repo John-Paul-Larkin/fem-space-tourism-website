@@ -39,7 +39,7 @@ export default function RootLayout({
       lang="en"
       className={`${barlow_condensed.variable} ${bellefair.variable} ${barlow.variable}`}
     >
-      <body className="relative bg-black font-barlow text-white ">
+      <body className="relative z-[0] bg-black font-barlow text-white ">
         <Navbar />
         {children}
       </body>

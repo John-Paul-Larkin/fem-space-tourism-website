@@ -18,6 +18,8 @@ const config: Config = {
       gridTemplateRows: {
         destinationMobile: "auto 1fr auto",
         destinationDesktop: "auto 1fr auto",
+        crewMobile: "auto 1fr auto",
+
       },
 
       gridTemplateColumns: {
@@ -48,9 +50,6 @@ const config: Config = {
         //  "container-width": "87.5rem", // 1400px
         "container-width": "90rem",
       },
-      // fontSize: {
-      //   clamp: "clamp(1em, 2em, 3em)",
-      // },
     },
     fontSize: {
       "fs-100": "0.875rem",
@@ -58,8 +57,14 @@ const config: Config = {
       "fs-300": "1rem",
       "fs-400": "1.125rem",
       "fs-500": "1.25rem",
+      "fs-550": "1.5rem",
+
       "fs-600": "1.75rem",
       "fs-700": "2rem",
+      "fs-750": "2.5rem",
+
+
+
       "fs-800": "3.5rem",
       "fs-900": "5rem",
       "fs-1000": "6.25rem",
