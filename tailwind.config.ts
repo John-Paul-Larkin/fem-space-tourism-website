@@ -19,11 +19,13 @@ const config: Config = {
         destinationMobile: "auto 1fr auto",
         destinationDesktop: "auto 1fr auto",
         crewMobile: "auto 1fr auto",
-
+        crewDesktop: "auto 1fr",
+        crewDetails: "auto auto 1fr auto",
       },
 
       gridTemplateColumns: {
         destinationDesktop: "1fr .72fr",
+        crewDesktop: "1fr 1fr",
       },
 
       fontFamily: {
@@ -63,8 +65,6 @@ const config: Config = {
       "fs-700": "2rem",
       "fs-750": "2.5rem",
 
-
-
       "fs-800": "3.5rem",
       "fs-900": "5rem",
       "fs-1000": "6.25rem",
@@ -75,7 +75,9 @@ const config: Config = {
       desktop: "769px",
       "mid-desktop": "850px",
       "lrg-desktop": "1000px",
-      "x-lrg-desktop": "1441px",
+      "x-lrg-desktop": "1200px",
+
+      "xx-lrg-desktop": "1441px",
     },
 
     colors: {

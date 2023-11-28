@@ -4,9 +4,9 @@ export default function Home() {
   return (
     <main className="bg-home-mobile bg-cover bg-bottom tablet:bg-home-tablet desktop:bg-home-desktop">
       <div
-        className="flex h-screen w-screen flex-col items-center justify-between desktop:mx-auto
-       desktop:max-w-container-width desktop:flex-row desktop:items-end desktop:justify-around desktop:pb-[8.187rem]
-       x-lrg-desktop:items-center x-lrg-desktop:pb-0"
+        className="xx-lrg-desktop:items-center xx-lrg-desktop:pb-0 flex h-screen w-screen flex-col items-center
+       justify-between desktop:mx-auto desktop:max-w-container-width desktop:flex-row desktop:items-end
+       desktop:justify-around desktop:pb-[8.187rem]"
       >
         <div className="mx-6 mt-[7rem] max-w-[20.44rem] text-center tablet:mt-[12.625rem] tablet:max-w-[27.75rem] desktop:m-0 desktop:w-[50%] desktop:text-left">
           <h5 className="font-barlow_condensed text-fs-300 uppercase tracking-ls-4 text-lilac tablet:text-fs-500 tablet:tracking-ls-5 desktop:text-fs-600 desktop:tracking-ls-6">
