@@ -30,16 +30,16 @@ export default function Technology() {
       <div className="opacity-[35%]... absolute h-full w-full bg-technology-mobile bg-cover tablet:bg-technology-tablet desktop:bg-technology-desktop"></div>
 
       <div className="mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">
-        <div className="grid-rows-technologyMobile desktop:grid-rows-technologyDesktop... desktop:grid-cols-technologyDesktop... relative grid">
+        <div className="grid-rows-technologyMobile desktop:grid-rows-technologyDesktop desktop:grid-cols-technologyDesktop relative grid">
           <h1
-            className=" mb-[1.8rem] mt-[0rem] font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:text-left 
-          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:text-fs-600 desktop:tracking-ls-6"
+            className=" mb-[1.8rem] font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:mb-[3.7rem] tablet:ml-[2.4rem] tablet:mt-[2.8rem] tablet:text-left
+          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:ml-[10.4rem] desktop:text-fs-600 desktop:tracking-ls-6 desktop:mt-[4.3rem]"
           >
-            <span className="mr-[.8rem] font-bold opacity-25">03</span>
+            <span className="mr-[.8rem] font-bold opacity-25 desktop:mr-[1.2rem]">03</span>
             Space launch 101
           </h1>
 
-          <div className="w-fit... relative aspect-[768/310] h-[10.625rem] w-full overflow-hidden   bg-white">
+          <div className="w-fit...  relative desktop:col-start-3 desktop:row-start-2 aspect-[768/310]   h-[10.625rem] w-full overflow-hidden bg-white tablet:h-[19rem] desktop:h-[32.9375rem] desktop:aspect-[515/527]">
             {imageLandscape && !isDesktop && (
               <Image
                 src={imageLandscape}
@@ -47,28 +47,27 @@ export default function Technology() {
                 quality={100}
                 fill={true}
                 style={{
-                  //   overflow: "hidden",
-                  //   height: "170px",
+   
                   objectFit: "cover",
                 }}
               />
             )}
-            {imageLandscape && isDesktop && (
+            {imagePortrait && isDesktop && (
               <Image
-                src={imageLandscape}
+                src={imagePortrait}
                 alt={`${name}`}
                 fill={true}
                 style={{
                   objectFit: "contain",
-                  objectPosition: "bottom",
+                //   objectPosition: "",
                 }}
               />
             )}
           </div>
 
-          <div className="mb-[1.5rem] mt-[2.1rem] flex items-center justify-center">
-            <nav className="h-[2.5rem] w-[9.5rem] ">
-              <ul className=" flex flex-row items-center justify-between ">
+          <div className="mb-[1.5rem]  mt-[2.1rem] flex items-center justify-center tablet:mb-[2.8rem] tablet:mt-[3.7rem] desktop:col-start-1 desktop:mr-[4.3rem] desktop:m-0 desktop:block desktop:ml-[10.4rem] desktop:mt-[5rem]">
+            <nav className="h-[2.5rem] w-[9.5rem] tablet:h-[3.75rem] tablet:w-[13.125rem] desktop:h-[19rem] desktop:w-[5rem]">
+              <ul className=" flex items-center justify-between desktop:flex-col desktop:h-full ">
                 <TechnologyMenu
                   name={name}
                   menuNumber={1}
@@ -90,13 +89,18 @@ export default function Technology() {
               </ul>
             </nav>
           </div>
-          <h2 className="mb-[.2rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac">
-            The terminology...
-          </h2>
 
-          <div className="text-fs-550 font-bellefair uppercase ">{name}</div>
-          <div className="mx-auto mt-[1rem] w-[20.44rem] text-fs-200 leading-lh-1 text-lilac ">
-            {description}
+          <div className="desktop:col-start-2 desktop:row-start-2 desktop:mt-[5rem]">
+            <h2 className="mb-[.2rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac tablet:text-fs-300 tablet:tracking-ls-4 desktop:text-fs-300 desktop:tracking-ls-4">
+              The terminology...
+            </h2>
+
+            <div className="text-fs-550 tablet:text-fs-750 font-bellefair uppercase desktop:text-fs-800">
+              {name}
+            </div>
+            <div className="mx-auto mt-[1rem] w-[20.44rem] text-fs-200 leading-lh-1 text-lilac tablet:mt-[.6rem] tablet:w-[28.625rem] tablet:text-fs-300 tablet:leading-lh-2 desktop:text-fs-400 desktop:leading-lh-3">
+              {description}
+            </div>
           </div>
         </div>
       </div>
@@ -122,11 +126,11 @@ const TechnologyMenu = (props: Props) => {
       <div
         className={`
           hover:bg-hover-circle border-opaque-border flex
-           h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[1px] ${
+           h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[1px] tablet:h-[3.75rem] tablet:w-[3.75rem] desktop:w-[5rem] desktop:h-[5rem] ${
              name == menuItem ? "bg-white text-black" : "bg-black"
            }`}
       >
-        <span className="relative left-[1px] font-bellefair text-fs-300 tracking-[1px]">
+        <span className="tablet:text-fs-550 relative left-[1px] font-bellefair text-fs-300 tracking-[1px] tablet:tracking-[1.5px]">
           {menuNumber}
         </span>
       </div>

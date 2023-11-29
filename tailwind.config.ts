@@ -21,12 +21,15 @@ const config: Config = {
         crewMobile: "auto 1fr auto",
         crewDesktop: "auto 1fr",
         crewDetails: "auto auto 1fr auto",
-        technologyMobile: "auto auto auto auto"
+        technologyMobile: "auto auto auto auto",
+        technologyDesktop: "auto 1fr"
       },
 
       gridTemplateColumns: {
         destinationDesktop: "1fr .72fr",
         crewDesktop: "1fr 1fr",
+        technologyDesktop: "auto auto auto"
+
       },
 
       fontFamily: {
@@ -77,7 +80,6 @@ const config: Config = {
       "mid-desktop": "850px",
       "lrg-desktop": "1000px",
       "x-lrg-desktop": "1200px",
-
       "xx-lrg-desktop": "1441px",
     },
 
