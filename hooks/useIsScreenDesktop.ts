@@ -1,8 +1,8 @@
-"use client";
+
 import { useEffect, useState } from "react";
 
 const useIsScreenDesktop = (): boolean => {
-  const [screenWidth, setScreenWidth] = useState<number>(window.innerWidth);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
 
   useEffect(() => {
     const updateScreenWidth = () => {
@@ -20,3 +20,5 @@ const useIsScreenDesktop = (): boolean => {
 };
 
 export default useIsScreenDesktop;
+
+
