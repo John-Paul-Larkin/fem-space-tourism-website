@@ -24,7 +24,7 @@ export default function Destination() {
       <div className="mx-auto mt-[5.4rem] h-screen max-w-container-width desktop:mt-[8.5rem]">
         <div
           className="grid-rows-destinationMobile  desktop:grid-rows-destinationDesktop desktop:grid-cols-destinationDesktop
-          grid text-center desktop:mb-[7.375rem] desktop:text-left"
+          grid text-center desktop:mb-[7.375rem] desktop:text-left"bg-lilac
         >
           <h1
             className=" font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left

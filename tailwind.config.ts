@@ -21,6 +21,7 @@ const config: Config = {
         crewMobile: "auto 1fr auto",
         crewDesktop: "auto 1fr",
         crewDetails: "auto auto 1fr auto",
+        technologyMobile: "auto auto auto auto"
       },
 
       gridTemplateColumns: {
@@ -89,6 +90,7 @@ const config: Config = {
       green: "hsl(182, 87%, 39%)",
       "black-rgba": "rgba(255, 255, 255, 0.04)",
       "opaque-border": "rgba(255, 255, 255, 0.2)",
+      "hover-circle" : "rgba(255, 255, 255, 0.4)",
     },
     backgroundImage: {
       "home-mobile": "url('/home/background-home-mobile.jpg')",

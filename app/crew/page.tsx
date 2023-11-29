@@ -11,21 +11,21 @@ export default function Crew() {
   const { name, role, bio } = selectedCrewMember;
   const image = selectedCrewMember?.images.png;
 
-  const handleClickCreMember = (clickedDestination: string) => {
+  const handleClickCreMember = (clickedCrewMember: string) => {
     const crewMember = crew.find(
-      (crewMember) => crewMember.name === clickedDestination,
+      (crewMember) => crewMember.name === clickedCrewMember,
     );
     crewMember && setSelectedCrewMember(crewMember);
   };
 
   return (
-    <main className="bg-lilac... relative h-screen w-screen overflow-hidden">
+    <main className="relative h-screen w-screen overflow-hidden">
       <div className="absolute h-full w-full bg-crew-mobile bg-cover opacity-[35%] tablet:bg-crew-tablet desktop:bg-crew-desktop"></div>
 
-      <div className="h-screen...  relative  mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">
+      <div className="relative mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">
         <div className="grid-rows-crewMobile desktop:grid-rows-crewDesktop desktop:grid-cols-crewDesktop relative grid">
           <h1
-            className=" font-barlow_condensed text-fs-300 uppercase tracking-ls-4 text-white tablet:mb-[3.75rem] tablet:ml-[2.4rem] tablet:mt-[2.5rem] tablet:text-left tablet:text-fs-500 tablet:tracking-ls-5
+            className="font-barlow_condensed text-fs-300 uppercase tracking-ls-4 text-white tablet:mb-[3.75rem] tablet:ml-[2.4rem] tablet:mt-[2.5rem] tablet:text-left tablet:text-fs-500 tablet:tracking-ls-5
             desktop:order-first desktop:col-span-1 desktop:m-0 desktop:mb-[9.025rem] desktop:ml-[1rem] desktop:mt-[4.55rem] desktop:text-fs-600 desktop:tracking-ls-6 x-lrg-desktop:ml-[10.35rem]"
           >
             <span className="mr-[.9rem] font-bold opacity-25 desktop:mr-[1.3rem] ">
@@ -34,15 +34,8 @@ export default function Crew() {
             Meet your crew
           </h1>
 
-          <div
-            className="after:border-opaque-border relative mt-8 after:absolute after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] tablet:order-3 tablet:mt-0 tablet:after:hidden
-          desktop:row-span-2 desktop:mt-[3.875rem]
-          "
-          >
-            <div
-              className="relative mx-auto h-[222px] tablet:h-[35.75rem] desktop:h-[44.5rem]
-          "
-            >
+          <div className="after:border-opaque-border relative mt-8 after:absolute after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] tablet:order-3 tablet:mt-0 tablet:after:hidden desktop:row-span-2 desktop:mt-[3.875rem]">
+            <div className="relative mx-auto h-[222px] tablet:h-[35.75rem] desktop:h-[44.5rem]">
               {image && (
                 <Image
                   src={image}
@@ -57,10 +50,10 @@ export default function Crew() {
             </div>
           </div>
 
-          <section className="bg-white... desktop:h-[26.5rem]... desktop:grid-rows-crewDetails tablet:grid desktop:order-last desktop:ml-[1rem] desktop:w-[30.5rem] x-lrg-desktop:ml-[10.35rem]">
+          <section className="desktop:grid-rows-crewDetails tablet:grid desktop:order-last desktop:ml-[1rem] desktop:w-[30.5rem] x-lrg-desktop:ml-[10.35rem]">
             <div className="tablet:order-4 desktop:mb-[5.2rem]">
-              <nav className=" flex h-[4.2rem] items-center justify-center pt-[1rem] desktop:justify-start">
-                <ul className="justify-betwee flex h-6 w-[6.13rem] desktop:h-10 desktop:w-[10rem]  ">
+              <nav className="flex h-[4.2rem] items-center justify-center pt-[1rem] desktop:justify-start">
+                <ul className="flex h-6 w-[6.13rem] desktop:h-10 desktop:w-[10rem]  ">
                   <CrewMemberMenu
                     name={name}
                     handleClickCrewMember={handleClickCreMember}
@@ -117,7 +110,7 @@ const CrewMemberMenu = (props: Props) => {
       className="flex h-full w-full cursor-pointer items-center justify-between"
     >
       <div
-        className={`h-[.625rem] w-[.625rem] rounded-full desktop:h-[.94rem] desktop:w-[.94rem]  ${
+        className={`hover:bg-hover-circle h-[.625rem] w-[.625rem] rounded-full desktop:h-[.94rem] desktop:w-[.94rem] ${
           name == menuItem ? "bg-white" : "bg-opaque-border"
         }`}
       ></div>
