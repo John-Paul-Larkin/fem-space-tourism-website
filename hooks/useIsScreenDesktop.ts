@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 
 const useIsScreenDesktop = (): boolean => {
@@ -15,7 +16,7 @@ const useIsScreenDesktop = (): boolean => {
     };
   }, []);
 
-  return screenWidth>=769;
+  return screenWidth >= 769;
 };
 
 export default useIsScreenDesktop;
