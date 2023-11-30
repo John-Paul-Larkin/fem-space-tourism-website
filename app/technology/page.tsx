@@ -33,14 +33,16 @@ export default function Technology() {
         <div className="grid-rows-technologyMobile desktop:grid-rows-technologyDesktop desktop:grid-cols-technologyDesktop relative grid">
           <h1
             className=" mb-[1.8rem] font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:mb-[3.7rem] tablet:ml-[2.4rem] tablet:mt-[2.8rem] tablet:text-left
-          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:ml-[10.4rem] desktop:text-fs-600 desktop:tracking-ls-6 desktop:mt-[4.3rem]"
+          tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:ml-[10.4rem] desktop:mt-[4.3rem] desktop:text-fs-600 desktop:tracking-ls-6"
           >
-            <span className="mr-[.8rem] font-bold opacity-25 desktop:mr-[1.2rem]">03</span>
+            <span className="mr-[.8rem] font-bold opacity-25 desktop:mr-[1.2rem]">
+              03
+            </span>
             Space launch 101
           </h1>
 
-          <div className="w-fit...  relative desktop:col-start-3 desktop:row-start-2 aspect-[768/310]   h-[10.625rem] w-full overflow-hidden bg-white tablet:h-[19rem] desktop:h-[32.9375rem] desktop:aspect-[515/527]">
-            {imageLandscape && !isDesktop && (
+          <div className="w-fit...  relative aspect-[768/310] h-[10.625rem] w-full   overflow-hidden bg-white tablet:h-[19rem] desktop:col-start-3 desktop:row-start-2 desktop:aspect-[515/527] desktop:h-[32.9375rem]">
+            {/* {imageLandscape && !isDesktop && (
               <Image
                 src={imageLandscape}
                 alt={`${name}`}
@@ -62,12 +64,35 @@ export default function Technology() {
                 //   objectPosition: "",
                 }}
               />
-            )}
+            )} */}
+
+            <Image
+              src={imageLandscape}
+              alt={`${name}`}
+              quality={100}
+              fill={true}
+              className="object-cover tablet:hidden"
+              //   style={{
+              //     objectFit: "cover",
+              //   }}
+            />
+
+            <Image
+              src={imagePortrait}
+              alt={`${name}`}
+              fill={true}
+              className="object-contain... hidden tablet:block"
+
+              //   style={{
+              //     objectFit: "contain",
+              //     //    objectPosition: "",
+              //   }}
+            />
           </div>
 
-          <div className="mb-[1.5rem]  mt-[2.1rem] flex items-center justify-center tablet:mb-[2.8rem] tablet:mt-[3.7rem] desktop:col-start-1 desktop:mr-[4.3rem] desktop:m-0 desktop:block desktop:ml-[10.4rem] desktop:mt-[5rem]">
+          <div className="mb-[1.5rem]  mt-[2.1rem] flex items-center justify-center tablet:mb-[2.8rem] tablet:mt-[3.7rem] desktop:col-start-1 desktop:m-0 desktop:ml-[10.4rem] desktop:mr-[4.3rem] desktop:mt-[5rem] desktop:block">
             <nav className="h-[2.5rem] w-[9.5rem] tablet:h-[3.75rem] tablet:w-[13.125rem] desktop:h-[19rem] desktop:w-[5rem]">
-              <ul className=" flex items-center justify-between desktop:flex-col desktop:h-full ">
+              <ul className=" flex items-center justify-between desktop:h-full desktop:flex-col ">
                 <TechnologyMenu
                   name={name}
                   menuNumber={1}
@@ -126,7 +151,7 @@ const TechnologyMenu = (props: Props) => {
       <div
         className={`
           hover:bg-hover-circle border-opaque-border flex
-           h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[1px] tablet:h-[3.75rem] tablet:w-[3.75rem] desktop:w-[5rem] desktop:h-[5rem] ${
+           h-[2.5rem] w-[2.5rem] items-center justify-center rounded-full border-[1px] tablet:h-[3.75rem] tablet:w-[3.75rem] desktop:h-[5rem] desktop:w-[5rem] ${
              name == menuItem ? "bg-white text-black" : "bg-black"
            }`}
       >

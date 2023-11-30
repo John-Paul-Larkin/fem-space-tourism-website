@@ -1,13 +1,15 @@
-
 import { useEffect, useState } from "react";
 
 const useIsScreenDesktop = (): boolean => {
   const [screenWidth, setScreenWidth] = useState<number>(0);
 
+
   useEffect(() => {
     const updateScreenWidth = () => {
       setScreenWidth(window.innerWidth);
     };
+
+    // updateScreenWidth();
 
     window.addEventListener("resize", updateScreenWidth);
 
@@ -20,5 +22,3 @@ const useIsScreenDesktop = (): boolean => {
 };
 
 export default useIsScreenDesktop;
-
-
