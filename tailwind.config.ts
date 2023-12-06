@@ -22,14 +22,13 @@ const config: Config = {
         crewDesktop: "auto 1fr",
         crewDetails: "auto auto 1fr auto",
         technologyMobile: "auto auto auto auto",
-        technologyDesktop: "auto 1fr"
+        technologyDesktop: "auto 1fr",
       },
 
       gridTemplateColumns: {
         destinationDesktop: "1fr .72fr",
         crewDesktop: "1fr 1fr",
-        technologyDesktop: "auto auto auto"
-
+        technologyDesktop: "auto 1fr 1fr",
       },
 
       fontFamily: {
@@ -80,7 +79,8 @@ const config: Config = {
       "mid-desktop": "850px",
       "lrg-desktop": "1000px",
       "x-lrg-desktop": "1200px",
-      "xx-lrg-desktop": "1441px",
+      "xx-lrg-desktop": "1417px",
+      "xxx-lrg-desktop": "1441px",
     },
 
     colors: {
@@ -92,7 +92,7 @@ const config: Config = {
       green: "hsl(182, 87%, 39%)",
       "black-rgba": "rgba(255, 255, 255, 0.04)",
       "opaque-border": "rgba(255, 255, 255, 0.2)",
-      "hover-circle" : "rgba(255, 255, 255, 0.4)",
+      "hover-circle": "rgba(255, 255, 255, 0.4)",
     },
     backgroundImage: {
       "home-mobile": "url('/home/background-home-mobile.jpg')",

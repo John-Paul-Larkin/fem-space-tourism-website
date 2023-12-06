@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="bg-home-mobile bg-cover bg-bottom tablet:bg-home-tablet desktop:bg-home-desktop">
       <div
-        className="xx-lrg-desktop:items-center xx-lrg-desktop:pb-0 flex h-screen w-screen flex-col items-center
+        className="xxx-lrg-desktop:items-center xxx-lrg-desktop:pb-0 flex h-screen w-screen flex-col items-center
        justify-between desktop:mx-auto desktop:max-w-container-width desktop:flex-row desktop:items-end
        desktop:justify-around desktop:pb-[8.187rem]"
       >
