@@ -20,11 +20,11 @@ export default function Destination() {
   };
 
   return (
-    <main className=" h-screen w-screen overflow-hidden bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
-      <div className="mx-auto mt-[5.4rem] h-screen max-w-container-width desktop:mt-[8.5rem]">
+    <main className=" h-svh w-screen overflow-hidden bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
+      <div className="h-svh mx-auto mt-[5.4rem] max-w-container-width desktop:mt-[8.5rem]">
         <div
-          className="grid-rows-destinationMobile  desktop:grid-rows-destinationDesktop desktop:grid-cols-destinationDesktop
-          grid text-center desktop:mb-[7.375rem] desktop:text-left"bg-lilac
+          className="grid  grid-rows-destinationMobile text-center
+          desktop:mb-[7.375rem] desktop:grid-cols-destinationDesktop desktop:grid-rows-destinationDesktop desktop:text-left"
         >
           <h1
             className=" font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left
@@ -36,8 +36,8 @@ export default function Destination() {
 
           <div className="grid desktop:mx-[1rem]">
             <div
-              className="mid-desktop:self-end relative mx-auto mb-6 mt-8 aspect-square w-[45%] min-w-[10.625rem] tablet:mb-[3.3125rem]
-            tablet:mt-[3.75rem] tablet:w-[39%] desktop:m-0 desktop:w-[100%] desktop:max-w-[27.8125rem] desktop:self-center desktop:justify-self-center"
+              className="relative mx-auto mb-6 mt-8 aspect-square w-[45%] min-w-[10.625rem] tablet:mb-[3.3125rem] tablet:mt-[3.75rem]
+            tablet:w-[39%] desktop:m-0 desktop:w-[100%] desktop:max-w-[27.8125rem] desktop:self-center desktop:justify-self-center mid-desktop:self-end"
             >
               {image && <Image src={image} alt={`${name}`} fill={true} />}
             </div>
@@ -81,8 +81,8 @@ export default function Destination() {
 
             <div className="relative">
               <p
-                className="after:border-opaque-border mx-8 pb-8 text-fs-200 leading-lh-1 text-lilac
-              after:absolute after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] tablet:mx-[6.125rem] tablet:pb-[3.068rem] tablet:text-fs-300 tablet:leading-lh-2
+                className="mx-8 pb-8 text-fs-200 leading-lh-1 text-lilac after:absolute
+              after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] after:border-opaque-border tablet:mx-[6.125rem] tablet:pb-[3.068rem] tablet:text-fs-300 tablet:leading-lh-2
               desktop:m-0 desktop:w-[27.75rem] desktop:text-fs-400 desktop:leading-lh-3 desktop:after:left-0 desktop:after:w-[27.75rem]"
               >
                 {description}

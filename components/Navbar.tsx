@@ -34,7 +34,7 @@ export default function Navbar() {
         <nav
           className={
             isMenuOpen
-              ? "absolute right-0 top-0  block h-screen w-[15.875rem] bg-white bg-opacity-10 text-white backdrop-blur-xl"
+              ? "h-svh absolute right-0  top-0 block w-[15.875rem] bg-white bg-opacity-10 text-white backdrop-blur-xl"
               : "hidden bg-black-rgba tablet:block tablet:h-24 tablet:w-[28.125rem] desktop:w-[51.875rem] desktop:bg-opacity-90 desktop:text-white desktop:backdrop-blur-xl"
           }
         >

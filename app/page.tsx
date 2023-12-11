@@ -4,11 +4,11 @@ export default function Home() {
   return (
     <main className="bg-home-mobile bg-cover bg-bottom tablet:bg-home-tablet desktop:bg-home-desktop">
       <div
-        className="xxx-lrg-desktop:items-center xxx-lrg-desktop:pb-0 flex h-screen w-screen flex-col items-center
-       justify-between desktop:mx-auto desktop:max-w-container-width desktop:flex-row desktop:items-end
-       desktop:justify-around desktop:pb-[8.187rem]"
+        className="h-svh flex w-screen flex-col  items-center justify-between desktop:mx-auto
+       desktop:max-w-container-width desktop:flex-row desktop:items-end desktop:justify-around desktop:pb-[8.187rem]
+       xxx-lrg-desktop:items-center xxx-lrg-desktop:pb-0 "
       >
-        <div className="mx-6 mt-[7rem] max-w-[20.44rem] text-center tablet:mt-[12.625rem] tablet:max-w-[27.75rem] desktop:m-0 desktop:w-[50%] desktop:text-left">
+        <div className="mx-6 mt-[7rem] max-w-[20.44rem] text-center tablet:mt-[12.625rem] tablet:max-w-[27.75rem] desktop:m-0 desktop:w-[50%] desktop:text-left ">
           <h5 className="font-barlow_condensed text-fs-300 uppercase tracking-ls-4 text-lilac tablet:text-fs-500 tablet:tracking-ls-5 desktop:text-fs-600 desktop:tracking-ls-6">
             So, you want to travel to
           </h5>

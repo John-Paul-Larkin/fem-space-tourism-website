@@ -23,7 +23,7 @@ export default function Technology() {
   const isDesktop = useIsScreenDesktop();
 
   return (
-    <main className="bg-lilac... relative h-screen w-screen overflow-hidden ">
+    <main className="bg-lilac... h-svh relative w-screen overflow-hidden ">
       <div className="opacity-[35%]... absolute h-full w-full bg-technology-mobile bg-cover tablet:bg-technology-tablet desktop:bg-technology-desktop"></div>
 
       <div className="mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">

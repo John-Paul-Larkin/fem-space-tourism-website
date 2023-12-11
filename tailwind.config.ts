@@ -15,6 +15,11 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      height: {
+        dvh: "100dvh",
+        svh: "100svh",
+      },
+
       gridTemplateRows: {
         destinationMobile: "auto 1fr auto",
         destinationDesktop: "auto 1fr auto",
@@ -81,6 +86,7 @@ const config: Config = {
       "x-lrg-desktop": "1200px",
       "xx-lrg-desktop": "1417px",
       "xxx-lrg-desktop": "1441px",
+      heightHome: "900px",
     },
 
     colors: {

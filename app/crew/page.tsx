@@ -19,7 +19,7 @@ export default function Crew() {
   };
 
   return (
-    <main className="relative h-screen w-screen overflow-hidden">
+    <main className="h-svh relative w-screen overflow-hidden">
       <div className="absolute h-full w-full bg-crew-mobile bg-cover opacity-[35%] tablet:bg-crew-tablet desktop:bg-crew-desktop"></div>
 
       <div className="relative mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">
