@@ -4,15 +4,15 @@ import Image from "next/image";
 import React, { useState } from "react";
 import jsonData from "@/public/data/data.json";
 
-import { Swiper, SwiperSlide, useSwiper, useSwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
 export default function Destination() {
   return (
-    <main className="w-screen overflow-hidden bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
-      <div className="mx-auto mt-[5.4rem] max-w-container-width desktop:mt-[8.5rem]">
+    <main className="overflow-hidden... h-screen w-screen bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
+      <div className="mx-auto w-full pt-[5.4rem] desktop:pt-[8.5rem]">
         <Swiper>
           <SwiperSlide>
             {({ isActive }) => (
@@ -52,7 +52,6 @@ export default function Destination() {
   );
 }
 
-
 type Props = {
   activeDestination: number | null;
   destination: number;
@@ -69,7 +68,7 @@ const DestinationDetails = (props: Props) => {
 
   return (
     <div
-      className="grid  grid-rows-destinationMobile text-center
+      className="grid  grid-rows-destinationMobile text-center max-w-container-width mx-auto
   desktop:mb-[7.375rem] desktop:grid-cols-destinationDesktop desktop:grid-rows-destinationDesktop desktop:text-left"
     >
       <h1

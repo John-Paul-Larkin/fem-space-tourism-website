@@ -4,16 +4,14 @@ import Image from "next/image";
 import React, { useState } from "react";
 import jsonData from "@/public/data/data.json";
 
-
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
 
-
 export default function Crew() {
   return (
-    <main className="relative w-screen overflow-hidden">
+    <main className="relative h-screen w-screen overflow-hidden">
       <div className="absolute h-full w-full bg-crew-mobile bg-cover opacity-[35%] tablet:bg-crew-tablet desktop:bg-crew-desktop"></div>
 
       <Swiper>
@@ -66,6 +64,8 @@ const CrewDetails = (props: Props) => {
   const { name, role, bio } = crew[crewMember];
   const image = crew[crewMember]?.images.png;
 
+  const swiper = useSwiper();
+
   return (
     <div className="relative mx-auto mt-[5.4rem] max-w-container-width text-center desktop:mt-[8.5rem] desktop:text-left">
       <div className="relative grid grid-rows-crewMobile desktop:grid-cols-crewDesktop desktop:grid-rows-crewDesktop">
@@ -105,21 +105,25 @@ const CrewDetails = (props: Props) => {
                 className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
                   activeIndex == 0 ? "bg-white" : "bg-opaque-border"
                 }`}
+                onClick={() => swiper.slideTo(0, 500)}
               ></li>
               <li
                 className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
                   activeIndex == 1 ? "bg-white" : "bg-opaque-border"
                 }`}
+                onClick={() => swiper.slideTo(1, 500)}
               ></li>
               <li
                 className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
                   activeIndex == 2 ? "bg-white" : "bg-opaque-border"
                 }`}
+                onClick={() => swiper.slideTo(2, 500)}
               ></li>
               <li
                 className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
                   activeIndex == 3 ? "bg-white" : "bg-opaque-border"
                 }`}
+                onClick={() => swiper.slideTo(3, 500)}
               ></li>
             </ul>
           </div>
