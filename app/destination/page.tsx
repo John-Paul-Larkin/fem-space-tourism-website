@@ -67,33 +67,20 @@ const DestinationDetails = (props: Props) => {
   const swiper = useSwiper();
 
   return (
-    <div
-      className="grid  grid-rows-destinationMobile text-center max-w-container-width mx-auto
-  desktop:mb-[7.375rem] desktop:grid-cols-destinationDesktop desktop:grid-rows-destinationDesktop desktop:text-left"
-    >
-      <h1
-        className=" font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left
-  tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:m-0 desktop:ml-[11%] desktop:mt-[4.5rem] desktop:text-fs-600 desktop:tracking-ls-6"
-      >
+    <div className="mx-auto  grid max-w-container-width grid-rows-destinationMobile text-center desktop:mb-[7.375rem] desktop:grid-cols-destinationDesktop desktop:grid-rows-destinationDesktop desktop:text-left">
+      <h1 className="font-barlow_condensed text-fs-300 uppercase tracking-ls-4 tablet:ml-[2.4rem] tablet:mt-[2.9rem] tablet:text-left tablet:text-fs-500 tablet:tracking-ls-5 desktop:col-span-2 desktop:m-0 desktop:ml-[11%] desktop:mt-[4.5rem] desktop:text-fs-600 desktop:tracking-ls-6">
         <span className="mr-[1.125rem] font-bold opacity-25">01</span>
         Pick your destination
       </h1>
 
       <div className="grid desktop:mx-[1rem]">
-        <div
-          className="relative mx-auto mb-6 mt-8 aspect-square w-[45%] min-w-[10.625rem] tablet:mb-[3.3125rem] tablet:mt-[3.75rem]
-    tablet:w-[39%] desktop:m-0 desktop:w-[100%] desktop:max-w-[27.8125rem] desktop:self-center desktop:justify-self-center mid-desktop:self-end"
-        >
+        <div className="relative mx-auto mb-6 mt-8 aspect-square w-[45%] min-w-[10.625rem] tablet:mb-[3.3125rem] tablet:mt-[3.75rem] tablet:w-[39%] desktop:m-0 desktop:w-[100%] desktop:max-w-[27.8125rem] desktop:self-center desktop:justify-self-center mid-desktop:self-end">
           {image && <Image src={image} alt={`${name}`} fill={true} />}
         </div>
       </div>
 
       <section className="relative">
-        <nav
-          className=" mb-5 h-[1.75rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac
-  tablet:mb-[1.7rem] tablet:h-[2.3rem] tablet:text-fs-300 tablet:tracking-ls-4 desktop:m-0 desktop:mb-[2.3125rem]
-  desktop:mt-16 desktop:text-fs-300 desktop:tracking-ls-4"
-        >
+        <nav className=" mb-5 h-[1.75rem] font-barlow_condensed text-fs-100 uppercase tracking-ls-3 text-lilac tablet:mb-[1.7rem] tablet:h-[2.3rem] tablet:text-fs-300 tablet:tracking-ls-4 desktop:m-0 desktop:mb-[2.3125rem] desktop:mt-16 desktop:text-fs-300 desktop:tracking-ls-4">
           <ul className="mx-auto  flex h-full w-[14.84375rem] items-start justify-between tablet:w-[17.84375rem] desktop:mx-0">
             <li
               className={`destination-menu-btn ${
