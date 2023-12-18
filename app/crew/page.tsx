@@ -13,30 +13,56 @@ import { Pagination, Navigation } from "swiper/modules";
 
 export default function Crew() {
   return (
-    <main className="h-svh relative w-screen overflow-hidden">
+    <main className="relative w-screen overflow-hidden">
       <div className="absolute h-full w-full bg-crew-mobile bg-cover opacity-[35%] tablet:bg-crew-tablet desktop:bg-crew-desktop"></div>
 
-      <Swiper modules={[Navigation, Pagination]} navigation pagination={true}>
+      <Swiper>
         <SwiperSlide>
-          <CrewDetails crewMember={0} />
+          {({ isActive }) => (
+            <CrewDetails
+              crewMember={0}
+              activeIndex={isActive === true ? 0 : null}
+            />
+          )}
         </SwiperSlide>
         <SwiperSlide>
-          <CrewDetails crewMember={1} />
+          {({ isActive }) => (
+            <CrewDetails
+              crewMember={1}
+              activeIndex={isActive === true ? 1 : null}
+            />
+          )}
         </SwiperSlide>
         <SwiperSlide>
-          <CrewDetails crewMember={2} />
+          {({ isActive }) => (
+            <CrewDetails
+              crewMember={2}
+              activeIndex={isActive === true ? 2 : null}
+            />
+          )}
         </SwiperSlide>
         <SwiperSlide>
-          <CrewDetails crewMember={3} />
+          {({ isActive }) => (
+            <CrewDetails
+              crewMember={3}
+              activeIndex={isActive === true ? 3 : null}
+            />
+          )}
         </SwiperSlide>
       </Swiper>
     </main>
   );
 }
 
-const CrewDetails = ({ crewMember }: { crewMember: number }) => {
-  const { crew } = jsonData;
+type Props = {
+  activeIndex: number | null;
+  crewMember: number;
+};
 
+const CrewDetails = (props: Props) => {
+  const { crewMember, activeIndex } = props;
+
+  const { crew } = jsonData;
   const { name, role, bio } = crew[crewMember];
   const image = crew[crewMember]?.images.png;
 
@@ -54,7 +80,7 @@ const CrewDetails = ({ crewMember }: { crewMember: number }) => {
         </h1>
 
         <div
-          className="desktop:mt-[10rem]... relative mt-8 after:absolute after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] after:border-opaque-border tablet:order-3 tablet:mt-0 tablet:after:hidden
+          className="relative mt-8 after:absolute after:left-[5%] after:top-0 after:h-full after:w-[90%] after:border-b-[1px] after:border-opaque-border tablet:order-3 tablet:mt-0 tablet:after:hidden
       desktop:row-span-2 desktop:mt-[3.875rem]"
         >
           <div className="relative mx-auto h-[222px] tablet:h-[35.75rem] desktop:h-[44.5rem] ">
@@ -73,7 +99,30 @@ const CrewDetails = ({ crewMember }: { crewMember: number }) => {
         </div>
 
         <section className="tablet:grid desktop:order-last desktop:ml-[1rem] desktop:w-[30.5rem] desktop:grid-rows-crewDetails x-lrg-desktop:ml-[10.35rem]">
-          <div className="h-[4.2rem] bg-yellow"></div>
+          <div className="flex h-[4.2rem] items-center justify-center tablet:order-4 tablet:pt-[1rem] desktop:justify-start">
+            <ul className="flex h-6 w-[5.6rem] cursor-pointer items-center justify-between desktop:h-10 desktop:w-[8rem] ">
+              <li
+                className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
+                  activeIndex == 0 ? "bg-white" : "bg-opaque-border"
+                }`}
+              ></li>
+              <li
+                className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
+                  activeIndex == 1 ? "bg-white" : "bg-opaque-border"
+                }`}
+              ></li>
+              <li
+                className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
+                  activeIndex == 2 ? "bg-white" : "bg-opaque-border"
+                }`}
+              ></li>
+              <li
+                className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
+                  activeIndex == 3 ? "bg-white" : "bg-opaque-border"
+                }`}
+              ></li>
+            </ul>
+          </div>
 
           <div className="tablet:order-4 desktop:mb-[5.2rem]"></div>
 
@@ -92,51 +141,3 @@ const CrewDetails = ({ crewMember }: { crewMember: number }) => {
     </div>
   );
 };
-
-// <nav className="flex h-[4.2rem] items-center justify-center pt-[1rem] desktop:justify-start">
-// <ul className="flex h-6 w-[6.13rem] desktop:h-10 desktop:w-[10rem]  ">
-//   <CrewMemberMenu
-//     name={name}
-//     handleClickCrewMember={handleClickCreMember}
-//     menuItem="Douglas Hurley"
-//   />
-//   <CrewMemberMenu
-//     name={name}
-//     handleClickCrewMember={handleClickCreMember}
-//     menuItem="Mark Shuttleworth"
-//   />
-//   <CrewMemberMenu
-//     name={name}
-//     handleClickCrewMember={handleClickCreMember}
-//     menuItem="Victor Glover"
-//   />
-//   <CrewMemberMenu
-//     name={name}
-//     handleClickCrewMember={handleClickCreMember}
-//     menuItem="Anousheh Ansari"
-//   />
-// </ul>
-// </nav>
-
-// type Props = {
-//   name: string | undefined;
-//   menuItem: string;
-//   handleClickCrewMember: (clickedCrewmember: string) => void;
-// };
-
-// const CrewMemberMenu = (props: Props) => {
-//   const { name, handleClickCrewMember, menuItem } = props;
-
-//   return (
-//     <li
-//       onClick={() => handleClickCrewMember(menuItem)}
-//       className="flex h-full w-full cursor-pointer items-center justify-between"
-//     >
-//       <div
-//         className={`h-[.625rem] w-[.625rem] rounded-full hover:bg-hover-circle desktop:h-[.94rem] desktop:w-[.94rem] ${
-//           name == menuItem ? "bg-white" : "bg-opaque-border"
-//         }`}
-//       ></div>
-//     </li>
-//   );
-// };
