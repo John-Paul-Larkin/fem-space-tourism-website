@@ -1,15 +1,15 @@
 "use client";
+import Image from "next/image";
 
 import React, { useState } from "react";
 import jsonData from "@/public/data/data.json";
-import Image from "next/image";
+
+
 import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
-import "./crewSwiper.css";
 
-import { Pagination, Navigation } from "swiper/modules";
 
 export default function Crew() {
   return (
