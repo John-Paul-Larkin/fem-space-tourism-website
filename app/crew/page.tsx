@@ -8,13 +8,19 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Keyboard } from "swiper/modules";
 
 export default function Crew() {
   return (
     <main className="relative h-screen w-screen overflow-hidden">
       <div className="absolute h-full w-full bg-crew-mobile bg-cover opacity-[35%] tablet:bg-crew-tablet desktop:bg-crew-desktop"></div>
 
-      <Swiper>
+      <Swiper
+          keyboard={{
+            enabled: true,
+          }}
+          modules={[Keyboard]}
+      >
         <SwiperSlide>
           {({ isActive }) => (
             <CrewDetails

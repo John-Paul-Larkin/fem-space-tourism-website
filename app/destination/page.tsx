@@ -8,12 +8,18 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Keyboard } from "swiper/modules";
 
 export default function Destination() {
   return (
     <main className="overflow-hidden... h-screen w-screen bg-destination-mobile bg-cover tablet:bg-destination-tablet desktop:bg-destination-desktop">
       <div className="mx-auto w-full pt-[5.4rem] desktop:pt-[8.5rem]">
-        <Swiper>
+        <Swiper
+          keyboard={{
+            enabled: true,
+          }}
+          modules={[Keyboard]}
+        >
           <SwiperSlide>
             {({ isActive }) => (
               <DestinationDetails

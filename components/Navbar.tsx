@@ -34,7 +34,7 @@ export default function Navbar() {
         <nav
           className={
             isMenuOpen
-              ? "h-svh absolute right-0  top-0 block w-[15.875rem] bg-white bg-opacity-10 text-white backdrop-blur-xl"
+              ? "absolute right-0 top-0  block h-svh w-[15.875rem] bg-white bg-opacity-10 text-white backdrop-blur-xl"
               : "hidden bg-black-rgba tablet:block tablet:h-24 tablet:w-[28.125rem] desktop:w-[51.875rem] desktop:bg-opacity-90 desktop:text-white desktop:backdrop-blur-xl"
           }
         >
@@ -82,10 +82,17 @@ const NavMenuItem = (props: Props) => {
 
   const { menuItem, setIsMenuOpen, index, isMenuOpen } = props;
 
+  let displayUnderline = false;
+  if (segment == null && menuItem == "home") {
+    displayUnderline = true;
+  } else if (segment == menuItem) {
+    displayUnderline = true;
+  }
+
   return (
     <li
       className={`nav-btn relative mt-8 tablet:m-0 tablet:flex tablet:items-center ${
-        segment == menuItem ? "after:tablet:border-b-[3px]" : ""
+        displayUnderline ? "after:tablet:border-b-[3px]" : ""
       }`}
     >
       <Link

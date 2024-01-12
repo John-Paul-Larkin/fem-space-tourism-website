@@ -8,13 +8,20 @@ import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
+import { Keyboard } from "swiper/modules";
 
 export default function Technology() {
   return (
     <main className="bg-lilac... relative h-svh w-screen overflow-hidden ">
       <div className="opacity-[35%]... absolute h-full w-full bg-technology-mobile bg-cover tablet:bg-technology-tablet desktop:bg-technology-desktop"></div>
 
-      <Swiper>
+      <Swiper
+        keyboard={{
+          enabled: true,
+          pageUpDown:true
+        }}
+        modules={[Keyboard]}
+      >
         <SwiperSlide>
           {({ isActive }) => (
             <TechnologyDetails
