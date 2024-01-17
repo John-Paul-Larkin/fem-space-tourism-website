@@ -8,6 +8,11 @@ Project built with Next.js, TypeScript, Swiper.js.
 
 Please try out the [deployment](https://fem-space-tourism-website-beryl.vercel.app/) which is hosted on vercel.
 
+<img src="https://github.com/John-Paul-Larkin/fem-space-tourism-website/assets/107807466/e1521dde-c8d4-4b6f-ab4b-25df2b74ac45" alt="Sample Image" width="400" height="auto">
+
+<img src="https://github.com/John-Paul-Larkin/fem-space-tourism-website/assets/107807466/9be1ca26-ee8f-434f-9eb7-ff3e37d5bc16" alt="Sample Image" width="400" height="auto">
+
+
 ## Getting Started
 
 First, run the development server:
